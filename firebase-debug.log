@@ -1,0 +1,37 @@
+[debug] [2022-10-06T10:04:23.600Z] ----------------------------------------------------------------------
+[debug] [2022-10-06T10:04:23.601Z] Command:       /usr/local/bin/node /usr/local/bin/firebase functions:shell
+[debug] [2022-10-06T10:04:23.601Z] CLI Version:   11.14.0
+[debug] [2022-10-06T10:04:23.601Z] Platform:      darwin
+[debug] [2022-10-06T10:04:23.601Z] Node Version:  v16.17.1
+[debug] [2022-10-06T10:04:23.602Z] Time:          Thu Oct 06 2022 17:04:23 GMT+0700 (Indochina Time)
+[debug] [2022-10-06T10:04:23.602Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-06T10:04:23.633Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-06T10:04:23.634Z] > authorizing via signed-in user (vanquang.3799@gmail.com)
+[debug] [2022-10-06T10:04:23.634Z] [iam] checking project sentry-webhooks for permissions ["firebase.projects.get"]
+[debug] [2022-10-06T10:04:23.635Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sentry-webhooks:testIamPermissions [none]
+[debug] [2022-10-06T10:04:23.635Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sentry-webhooks:testIamPermissions x-goog-quota-user=projects/sentry-webhooks
+[debug] [2022-10-06T10:04:23.635Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sentry-webhooks:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-06T10:04:24.665Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sentry-webhooks:testIamPermissions 200
+[debug] [2022-10-06T10:04:24.665Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sentry-webhooks:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-06T10:04:24.870Z] Error: Cannot find module '/Volumes/data/code/mac-sentry-webhooks/mac-sentry-hooks/functions/package.json'
+Require stack:
+- /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js
+- /usr/local/lib/node_modules/firebase-tools/lib/emulator/controller.js
+- /usr/local/lib/node_modules/firebase-tools/lib/emulator/commandUtils.js
+- /usr/local/lib/node_modules/firebase-tools/lib/commands/database-get.js
+- /usr/local/lib/node_modules/firebase-tools/lib/commands/index.js
+- /usr/local/lib/node_modules/firebase-tools/lib/index.js
+- /usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:956:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:804:27)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at FunctionsEmulator.getNodeBinary (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:633:21)
+    at FunctionsEmulator.start (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:179:39)
+    at Function.start (/usr/local/lib/node_modules/firebase-tools/lib/emulator/registry.js:16:24)
+    at EmulatorServer.start (/usr/local/lib/node_modules/firebase-tools/lib/emulator/emulatorServer.js:17:43)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async FunctionsServer.start (/usr/local/lib/node_modules/firebase-tools/lib/serve/functions.js:53:9)
+[error] 
+[error] Error: An unexpected error has occurred.
